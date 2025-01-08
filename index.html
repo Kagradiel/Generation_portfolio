@@ -6,15 +6,19 @@
     <meta name="description" content="Projeto Portfólio" />
     <meta name="author" content="Generation Brasil" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="icon" type="image/svg" href="./assets/img/favicon.svg" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Meu perfil</title>
   </head>
   <body>
     <header>
-      <div id="header_content">
-        <div id="titulo">
-          <h1>Generation Brasil</h1>
-        </div>
+      <div id="header_content" class="flex">
+        <a href="./index.html">
+          <div id="titulo">
+            <h1>Generation Brasil</h1>
+          </div>
+        </a>
 
         <div id="menu">
           <nav>
@@ -28,13 +32,14 @@
     </header>
 
     <main>
-      <section id="about">
+      <section id="about" class="flex-start">
         <h2>Sobre a Generation Brasil</h2>
 
-        <div id="conteudo">
+        <div id="conteudo" class="flex">
           <img
             src="./assets/img/user_01.svg"
             alt="Foto do criador desse conteudo"
+            class="foto_perfil"
           />
 
           <article id="sobre_texto">
@@ -60,10 +65,10 @@
         </div>
       </section>
 
-      <section id="video">
+      <section id="video" class="flex-start">
         <h2>Meu vídeo favorito:</h2>
 
-        <div class="youtube">
+        <div class="youtube" class="flex">
           <iframe
             width="560"
             height="315"
@@ -76,16 +81,20 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="flex playing">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+
       <section id="redes_sociais">
         <a href="">
-          <img src="assets/img/linkedin.svg" alt="LinkedIn" />
+          <img class="social_icon" src="assets/img/linkedin.svg" alt="LinkedIn" />
         </a>
         <a href="">
-          <img src="assets/img/github.svg" alt="Github" />
+          <img class="social_icon" src="assets/img/github.svg" alt="Github" />
         </a>
         <a href="">
-          <img src="assets/img/instagram.svg" alt="Instagram" />
+          <img class="social_icon" src="assets/img/instagram.svg" alt="Instagram" />
         </a>
       </section>
 
