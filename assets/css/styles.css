@@ -61,6 +61,10 @@ body {
   color: var(--black-800);
 }
 
+main {
+  padding-top: 80px;
+}
+
 h1 {
   color: var(--white);
   font-size: 2rem;
@@ -102,7 +106,7 @@ p {
 }
 
 #header_content {
-  height: 80px;
+  height: 6dvh;
   position: fixed;
   top: 0;
   width: 100%;
@@ -124,24 +128,28 @@ p {
   text-decoration: none;
   color: var(--white);
   font-size: 20px;
-  padding: 3px 20px;
+  padding: .5dvh 20px;
+  border-radius: 13px;
 }
 
 #menu li a:hover {
   color: var(--purple-200);
   transition: .7s ease;
-  background: var(--white);
-  border-radius: 5px;
+  background: var(--white); 
 }
 
-main {
-  padding-top: 80px;
+
+#titulo h1{
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
 }
+
 
 #about {
   flex-direction: column;
   margin: 2rem auto;
-  width: 90%;
+  width: 60%;
 }
 
 #conteudo {
@@ -157,18 +165,19 @@ main {
 
 #video {
   flex-direction: column;
-  margin: 2rem auto;
-  width: 90%;
+  margin: 5dvh auto;
+  width: 60%;
 }
 
 .youtube {
+  margin: 5dvh 0;
   justify-self: center;
 }
 
 .youtube iframe{
-    border-radius: 15px;
-    box-shadow:  13px 13px 66px #747474,
-             -13px -13px 66px #ffffff;
+    border-radius: 10px;
+    box-shadow:  5px 5px 66px #747474,
+             -5px -5px 66px #ffffff;
 }
 
 footer {
