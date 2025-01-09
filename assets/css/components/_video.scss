@@ -1,0 +1,17 @@
+#video {
+    flex-direction: column;
+    margin: 5dvh auto;
+    width: 60%;
+  }
+  
+  .youtube {
+    margin: 5dvh 0;
+    justify-self: center;
+  }
+  
+  .youtube iframe{
+      border-radius: 10px;
+      box-shadow:  5px 5px 66px #747474,
+               -5px -5px 66px #ffffff;
+  }
+  

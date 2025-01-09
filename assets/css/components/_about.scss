@@ -1,0 +1,16 @@
+#about {
+  flex-direction: column;
+  margin: 2rem auto;
+  width: 60%;
+}
+
+#conteudo {
+  flex-direction: row;
+  gap: 2rem;
+  margin: 2vh auto;
+}
+
+.foto_perfil {
+  width: 20dvh;
+  height: auto;
+}

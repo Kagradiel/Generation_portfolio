@@ -1,0 +1,92 @@
+@use '../abstract/variaveis';
+
+footer {
+    position: relative;
+    flex-direction: column;
+    margin: 0;
+    padding: 2rem;
+    color: variaveis.$white;
+    background-color: variaveis.$purple-500;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+
+    h3{
+        z-index: 2;
+    }
+  }
+
+  .wave {
+    position: absolute;
+    width: 200vw;
+    height: 250dvh;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    margin-left: -15vw;
+    margin-top: -20dvh;
+    background: linear-gradient(744deg,variaveis.$purple-200,variaveis.$purple-500 60%,variaveis.$purple-200);
+    z-index: 0;
+  }
+
+  #redes_sociais {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0 0 0;
+    width: 320px;
+  }
+  
+  .social_icon {
+    width: 4rem;
+    height: 4rem;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7457%)
+      hue-rotate(23deg) brightness(95%) contrast(87%);
+  }
+  
+  .social_icon:hover {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(59%) saturate(2437%)
+      hue-rotate(213deg) brightness(86%) contrast(88%);
+  }
+  
+  
+.wave:nth-child(2),
+.wave:nth-child(3) {
+  top: 210px;
+}
+
+.playing .wave {
+  border-radius: 40%;
+  animation: wave 15000ms infinite linear;
+}
+
+.wave {
+  border-radius: 40%;
+  animation: wave 55s infinite linear;
+}
+
+.playing .wave:nth-child(2) {
+  animation-duration: 28s;
+}
+
+.wave:nth-child(2) {
+  animation-duration: 50s;
+}
+
+.playing .wave:nth-child(3) {
+  animation-duration: 28s;
+}
+
+.wave:nth-child(3) {
+  animation-duration: 45ms;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
