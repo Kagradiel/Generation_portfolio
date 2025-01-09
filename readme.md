@@ -5,6 +5,6 @@ Tecnologias usadas:
 
 <ul>
     <li> HTML       </li>
-    <li> CSS        </li>
-    <li>Javascript  </li>
+    <li> CSS - SCSS </li>
+    <li> Javascript </li>
 </ul>

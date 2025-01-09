@@ -1,0 +1,17 @@
+#endereco {
+  font-weight: 540;
+  font-size: 1.2rem;
+}
+
+#mapa {
+  width: 480px;
+  flex-direction: column;
+  gap: 3rem;
+  border-radius: 5px;
+}
+
+#endereco > p {
+  font-size: 1rem;
+  text-align: justify;
+  font-weight: 600;
+}

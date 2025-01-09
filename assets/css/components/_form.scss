@@ -1,0 +1,98 @@
+@use '../abstract/variaveis';
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: none;
+
+  label {
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  input,
+  textarea {
+    margin: 0.5rem 0 1rem;
+    padding: 0.5rem;
+    border-radius: 1.25rem;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  span {
+    margin: 0 0 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: red;
+  }
+
+  button {
+    border-radius: 0.75rem;
+    text-align: center;
+    --color: #00a97f;
+    padding: 0.75rem 2rem;
+    background-color: transparent;
+    border-radius: 0.3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid variaveis.$purple-800;
+    font-family: inherit;
+    text-transform: uppercase;
+    background: variaveis.$purple-500;
+    color: variaveis.$white;
+    z-index: 1;
+  }
+
+  button::before,
+  button::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background: variaveis.$purple-500;
+    transition: 1s ease;
+  }
+
+  button::before {
+    top: -1em;
+    left: -1em;
+  }
+
+  button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+  }
+
+  button:hover::before,
+  button:hover::after {
+    height: 50dvh;
+    width: 50vw;
+  }
+
+  button:hover {
+    color: variaveis.$white;
+    background: variaveis.$purple-200;
+  }
+
+  button:active {
+    filter: brightness(0.8);
+  }
+}
+
+textarea {
+  resize: none;
+  height: 5rem;
+}

@@ -1,0 +1,10 @@
+@use './abstract/reset';
+@use './abstract/variaveis';
+@use './abstract/root';
+
+@use './components/header';
+@use './components/about';
+@use './components/video';
+@use './components/form';
+@use './components/mapa';
+@use './components/footer';
