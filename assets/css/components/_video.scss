@@ -1,17 +1,41 @@
 #video {
-    flex-direction: column;
-    margin: 5dvh auto;
-    width: 60%;
-  }
+  flex-direction: column;
+  margin: 5dvh auto;
+  width: 60%;
+}
+
+.youtube {
+  margin: 5dvh 0;
+  justify-self: center;
   
+  iframe {
+    border-radius: 10px;
+    box-shadow: 5px 5px 66px #747474, -5px -5px 66px #ffffff;
+  }
+
+}
+
+
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+
+  #video {
+    
+    h2{
+      text-align: center;
+    }
+
+  }
+
   .youtube {
-    margin: 5dvh 0;
-    justify-self: center;
-  }
+    
+    iframe {
+      width: 100%;
+      height: 49.5dvh;
+      margin: auto;
+    }
   
-  .youtube iframe{
-      border-radius: 10px;
-      box-shadow:  5px 5px 66px #747474,
-               -5px -5px 66px #ffffff;
   }
-  
+
+
+}

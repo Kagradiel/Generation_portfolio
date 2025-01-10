@@ -4,7 +4,7 @@
 }
 
 #mapa {
-  width: 480px;
+  width: 25vw;
   flex-direction: column;
   gap: 3rem;
   border-radius: 5px;
@@ -14,4 +14,10 @@
   font-size: 1rem;
   text-align: justify;
   font-weight: 600;
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  #mapa {
+    width: 90vw;
+  }
 }

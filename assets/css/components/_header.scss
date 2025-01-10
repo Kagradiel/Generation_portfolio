@@ -1,4 +1,4 @@
-@use '../abstract/variaveis';
+@use "../abstract/variaveis";
 
 #header_content {
   height: 62px;
@@ -15,11 +15,14 @@
 }
 
 #menu {
+  
   li {
+    
     display: inline;
     padding: 1rem;
 
     a {
+      
       text-decoration: none;
       color: variaveis.$white;
       font-size: 20px;
@@ -39,5 +42,14 @@
     font-size: 1.4rem;
     font-weight: 700;
     color: variaveis.$white;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .responsive_menu nav ul li img {
+    width: 7vw;
+    color: variaveis.$white;
+    filter: invert(99%) sepia(2%) saturate(2493%) hue-rotate(13deg)
+      brightness(114%) contrast(93%);
   }
 }

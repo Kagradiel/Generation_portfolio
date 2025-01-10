@@ -3,7 +3,7 @@
 form {
   display: flex;
   flex-direction: column;
-  width: 480px;
+  width: 25vw;
   margin: 2rem 0;
   padding: 1.5rem;
   border: none;
@@ -95,4 +95,13 @@ form {
 textarea {
   resize: none;
   height: 5rem;
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+
+  form {
+    width: 90vw;
+  }
+
 }

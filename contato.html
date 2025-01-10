@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="icon" type="image/svg" href="./assets/img/favicon.svg" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script src="./assets/js/script.js" defer></script>
+    <script type="module" src="./assets/js/script.js" defer></script>
     <title>Contatos</title>
   </head>
   <body>
@@ -21,17 +21,8 @@
           </div>
         </a>
 
-        <div id="menu">
-          <nav>
-            <ul id="menu">
-              <li>
-                <a href="index.html"> Home </a>
-              </li>
-              <li>
-                <a href="contato.html"> Contato </a>
-              </li>
-            </ul>
-          </nav>
+        <div id="menu" class="responsive_menu">
+          
         </div>
       </div>
     </header>
@@ -78,7 +69,7 @@
           >
           </textarea>
 
-          <button type="submit">Enviar</button>
+          <button id="button_form" type="submit">Enviar</button>
         </form>
 
         <article id="mapa" class="flex_start">

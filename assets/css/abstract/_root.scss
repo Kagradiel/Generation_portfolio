@@ -1,91 +1,102 @@
-@use './variaveis';
+@use "./variaveis";
 
 ::-webkit-scrollbar {
-    width: 7px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-  
-  ::selection {
-      background-color: variaveis.$purple-800;
-      color: white;
-  }
-  
-  ::-moz-selection {
-      background-color: variaveis.$purple-800; 
-      color: white; 
-  }
+  width: 7px;
+}
 
-  html {
-    width: 100%;
-    height: 100dvh;
-  }
-  
-  body {
-    background: variaveis.$gray-200;
-    color: variaveis.$black-800;
-  }
-  
-  main {
-    padding-top: 80px;
-  }
-  
-  h1 {
-    color: variaveis.$white;
-    font-size: 2rem;
-    font-weight: 700;
-  }
-  
-  h2 {
-    padding: 1rem;
-    color: variaveis.$black-800;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: left;
-  }
-  
-  h3 {
-    padding: 1rem;
-    color: variaveis.$white;
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-align: center;
-  }
-  
-  p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    text-align: justify;
-    padding: 0.5rem 0;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5);
+}
 
-  .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .flex_start {
-    display: flex;
-    justify-content: flex-start;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::selection {
+  background-color: variaveis.$purple-800;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: variaveis.$purple-800;
+  color: white;
+}
+
+html {
+  width: 100%;
+  height: 100dvh;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  background: variaveis.$gray-200;
+  color: variaveis.$black-800;
+}
+
+main {
+  padding-top: 80px;
+}
+
+h1 {
+  color: variaveis.$white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  padding: 1rem;
+  color: variaveis.$black-800;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+h3 {
+  padding: 1rem;
+  color: variaveis.$white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: justify;
+  padding: 0.5rem 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#contact {
+  flex-direction: row;
+  gap: 2rem;
+  min-height: 71.6dvh;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
   #contact {
-    flex-direction: row;
-    gap: 2rem;
-    min-height: 71.6dvh;
-    justify-content: space-evenly;
+    flex-direction: column;
   }
+}
+
+.hidden{
+  display: none;
+}
