@@ -15,13 +15,6 @@ function abrirMenuMobile(menuContainer) {
 
 
   menuBotao.addEventListener("click", () => {
-    const footer = document.querySelector("footer");
-    footer.classList.add("hidden");
-    
-    if(document.querySelector("#button_form")){
-      const button = document.querySelector("#button_form");
-      button.classList.add("hidden");
-    }
 
     menuContainer.innerHTML = `
                     <div class="menuMobileAberto">
@@ -48,14 +41,6 @@ function fecharMenuMobile(menuContainer) {
 
   botaoFechar.addEventListener("click", () => {
     
-    const footer = document.querySelector("footer");
-    footer.classList.remove("hidden");
-    
-    if(document.querySelector("#button_form")){
-      const button = document.querySelector("#button_form");
-      button.classList.remove("hidden");
-    }
-
     menuMobile(menuContainer);
 
   });
