@@ -9,4 +9,5 @@
 @use './components/mapa';
 @use './components/footer';
 @use './components/menuMobile';
-@use './components/wave';
+@use './animations/wave';
+@use './animations/calm_waves';

@@ -58,8 +58,14 @@ footer {
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .social_icon{
-    width: 13vw;
-    height: 13vw;
+    width: 10vw;
+    height: 10vw;
+  }
+  footer {
+    padding: .7rem 2rem;
+    h3 {
+      font-size: 1rem;
+    }
   }
 }
 

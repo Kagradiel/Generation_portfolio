@@ -8,8 +8,7 @@
   justify-content: space-between;
   padding: 24px;
   background-color: variaveis.$color-800;
-  border-bottom: 1px solid variaveis.$color-500;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(96, 164, 209, 0.486);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   z-index: 998;
@@ -18,9 +17,8 @@
 #menu {
   
   li {
-    
+
     display: inline;
-    padding: 1rem;
 
     a {
       
