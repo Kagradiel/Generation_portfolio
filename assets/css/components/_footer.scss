@@ -33,7 +33,39 @@ footer {
 }
 
 .social_icon:hover {
-  filter: brightness(0) saturate(100%) invert(65%) sepia(59%) saturate(2437%)
-    hue-rotate(213deg) brightness(86%) contrast(88%);
+  animation: pulse .7s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    opacity: 0.8;
+  }
+  55% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .social_icon{
+    width: 10vw;
+    height: 10vw;
+  }
+  footer {
+    padding: .7rem 2rem;
+    h3 {
+      font-size: 1rem;
+    }
+  }
 }
 
