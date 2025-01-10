@@ -19,5 +19,13 @@
 @media screen and (max-width: 768px) and (orientation: portrait) {
   #mapa {
     width: 90vw;
+    margin-bottom: 5dvh;
+    flex-direction: column;
+    gap: 0;
   }
+
+  #endereco {
+    font-size: 1rem;
+  }
+  
 }

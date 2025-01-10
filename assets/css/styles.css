@@ -17,6 +17,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -78,23 +79,24 @@ table {
 }
 
 ::-moz-selection {
-  background-color: rgba(11, 75, 100, 0.6784313725);
+  background-color: rgba(10, 97, 119, 0.8431372549);
   color: white;
 }
 
 ::selection {
-  background-color: rgba(11, 75, 100, 0.6784313725);
+  background-color: rgba(10, 97, 119, 0.8431372549);
   color: white;
 }
 
 ::-moz-selection {
-  background-color: rgba(11, 75, 100, 0.6784313725);
+  background-color: rgba(10, 97, 119, 0.8431372549);
   color: white;
 }
 
 html {
   width: 100%;
   height: 100dvh;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -169,8 +171,8 @@ p {
   width: 100%;
   justify-content: space-between;
   padding: 24px;
-  background-color: rgba(11, 75, 100, 0.6784313725);
-  border-bottom: 1px solid rgba(54, 154, 200, 0.7411764706);
+  background-color: rgba(10, 97, 119, 0.8431372549);
+  border-bottom: 1px solid rgba(54, 190, 200, 0.7411764706);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -187,7 +189,7 @@ p {
   padding: 20px 20px;
 }
 #menu li a:hover {
-  color: #7bc7d1;
+  color: hsl(187, 48%, 65%);
   transition: 0.7s ease;
   background: #f9f9f9;
 }
@@ -297,10 +299,10 @@ form button {
   transition: 0.5s;
   font-weight: 700;
   font-size: 1rem;
-  border: 1px solid rgba(11, 75, 100, 0.6784313725);
+  border: 1px solid rgba(10, 97, 119, 0.8431372549);
   font-family: inherit;
   text-transform: uppercase;
-  background: rgba(54, 154, 200, 0.7411764706);
+  background: rgba(54, 190, 200, 0.7411764706);
   color: #f9f9f9;
   z-index: 1;
 }
@@ -314,7 +316,7 @@ form button::after {
   position: absolute;
   border-radius: 50%;
   z-index: -1;
-  background: rgba(54, 154, 200, 0.7411764706);
+  background: rgba(54, 190, 200, 0.7411764706);
   transition: 1s ease;
 }
 form button::before {
@@ -332,7 +334,7 @@ form button:hover::after {
 }
 form button:hover {
   color: #f9f9f9;
-  background: #7bc7d1;
+  background: hsl(187, 48%, 65%);
 }
 form button:active {
   filter: brightness(0.8);
@@ -369,6 +371,12 @@ textarea {
 @media screen and (max-width: 768px) and (orientation: portrait) {
   #mapa {
     width: 90vw;
+    margin-bottom: 5dvh;
+    flex-direction: column;
+    gap: 0;
+  }
+  #endereco {
+    font-size: 1rem;
   }
 }
 footer {
@@ -377,7 +385,7 @@ footer {
   margin: 0;
   padding: 2rem;
   color: #f9f9f9;
-  background-color: rgba(54, 154, 200, 0.7411764706);
+  background-color: rgba(54, 190, 200, 0.7411764706);
   font-weight: bold;
   text-align: center;
   overflow: hidden;
@@ -410,10 +418,11 @@ footer h3 {
   left: 0;
   height: 100dvh;
   width: 100vw;
-  background-color: #7bc7d1;
+  background-color: hsl(187, 48%, 65%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: none;
   z-index: 20;
 }
 .menuMobileAberto span {
@@ -488,7 +497,7 @@ footer h3 {
   top: 0;
   margin-left: -15vw;
   margin-top: -20dvh;
-  background: linear-gradient(744deg, #7bc7d1, rgba(54, 154, 200, 0.7411764706) 60%, #7bc7d1);
+  background: linear-gradient(744deg, hsl(187, 48%, 65%), rgba(54, 190, 200, 0.7411764706) 60%, hsl(187, 48%, 65%));
   z-index: 0;
 }
 

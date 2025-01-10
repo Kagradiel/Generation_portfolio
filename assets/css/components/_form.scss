@@ -44,10 +44,10 @@ form {
     transition: 0.5s;
     font-weight: 700;
     font-size: 1rem;
-    border: 1px solid variaveis.$purple-800;
+    border: 1px solid variaveis.$color-800;
     font-family: inherit;
     text-transform: uppercase;
-    background: variaveis.$purple-500;
+    background: variaveis.$color-500;
     color: variaveis.$white;
     z-index: 1;
   }
@@ -62,7 +62,7 @@ form {
     position: absolute;
     border-radius: 50%;
     z-index: -1;
-    background: variaveis.$purple-500;
+    background: variaveis.$color-500;
     transition: 1s ease;
   }
 
@@ -84,7 +84,7 @@ form {
 
   button:hover {
     color: variaveis.$white;
-    background: variaveis.$purple-200;
+    background: variaveis.$color-200;
   }
 
   button:active {
