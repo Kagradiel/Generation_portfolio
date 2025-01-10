@@ -410,9 +410,34 @@ footer h3 {
 }
 
 .social_icon:hover {
-  filter: brightness(0) saturate(100%) invert(65%) sepia(59%) saturate(2437%) hue-rotate(213deg) brightness(86%) contrast(88%);
+  animation: pulse 0.7s infinite;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    opacity: 0.8;
+  }
+  55% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .social_icon {
+    width: 13vw;
+    height: 13vw;
+  }
+}
 .menuMobileAberto {
   position: absolute;
   top: 0;
@@ -425,6 +450,19 @@ footer h3 {
   align-items: center;
   box-shadow: none;
   z-index: 20;
+  -webkit-clip-path: circle(0% at 100% 0%);
+          clip-path: circle(0% at 100% 0%);
+  transition: -webkit-clip-path 0.3s ease-in-out;
+  transition: clip-path 0.3s ease-in-out;
+  transition: clip-path 0.3s ease-in-out, -webkit-clip-path 0.3s ease-in-out;
+}
+.menuMobileAberto.active {
+  -webkit-clip-path: circle(100% at 50% 50%);
+          clip-path: circle(100% at 50% 50%);
+}
+.menuMobileAberto.inactive {
+  -webkit-clip-path: circle(0% at 100% 0%);
+          clip-path: circle(0% at 100% 0%);
 }
 .menuMobileAberto span {
   z-index: 21;
@@ -450,45 +488,6 @@ footer h3 {
   padding-bottom: 1vh;
 }
 
-.wave:nth-child(2),
-.wave:nth-child(3) {
-  top: 210px;
-}
-
-.playing .wave {
-  border-radius: 40%;
-  animation: wave 15000ms infinite linear;
-}
-
-.wave {
-  border-radius: 40%;
-  animation: wave 55s infinite linear;
-}
-
-.playing .wave:nth-child(2) {
-  animation-duration: 28s;
-}
-
-.wave:nth-child(2) {
-  animation-duration: 50s;
-}
-
-.playing .wave:nth-child(3) {
-  animation-duration: 28s;
-}
-
-.wave:nth-child(3) {
-  animation-duration: 45ms;
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .wave {
   position: absolute;
   width: 200vw;

@@ -13,24 +13,26 @@ export function tamanhoDaTela() {
 function abrirMenuMobile(menuContainer) {
   const menuBotao = document.querySelector("[data-menu]");
 
-
   menuBotao.addEventListener("click", () => {
-
     menuContainer.innerHTML = `
-                    <div class="menuMobileAberto">
+      <div class="menuMobileAberto">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <span>
+          <img src="./assets/img/fechar.svg" alt="um X para fechar o menu" data-fechar>
+        </span>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./contato.html">Contato</a></li>
+        </ul>
+      </div>
+    `;
 
-                        <div class="wave"></div>
-                        <div class="wave"></div>
-
-                        <span>
-                            <img src="./assets/img/fechar.svg" alt="um X para fechar o menu" data-fechar>
-                        </span>
-                        <ul>
-                            <li><a href="./index.html">  Home   </a></li>
-                            <li><a href="./contato.html">Contato</a></li>
-                        </ul>
-                    </div> 
-            `;
+    const menuMobileAberto = menuContainer.querySelector('.menuMobileAberto');
+    setTimeout(() => {
+      menuMobileAberto.classList.remove('inactive');
+      menuMobileAberto.classList.add('active');
+    }, 10);
 
     fecharMenuMobile(menuContainer);
   });
@@ -40,31 +42,34 @@ function fecharMenuMobile(menuContainer) {
   const botaoFechar = document.querySelector("[data-fechar]");
 
   botaoFechar.addEventListener("click", () => {
-    
-    menuMobile(menuContainer);
+    const menuMobileAberto = menuContainer.querySelector('.menuMobileAberto');
+    menuMobileAberto.classList.remove('active');
+    menuMobileAberto.classList.add('inactive');
 
+    setTimeout(() => {
+      menuMobile(menuContainer);
+    }, 300); // Match the duration of the CSS transition
   });
 }
 
 function menuMobile(menuContainer) {
   menuContainer.innerHTML = `
-        <nav>
-            <ul id="menu">
-              <li><img src="./assets/img/menu.svg" alt="Menu" data-menu /></button></li>
-            </ul>
-        </nav>
-    
-    `;
-    abrirMenuMobile(menuContainer);
+    <nav>
+      <ul id="menu">
+        <li><img src="./assets/img/menu.svg" alt="Menu" data-menu /></li>
+      </ul>
+    </nav>
+  `;
+  abrirMenuMobile(menuContainer);
 }
 
 function menuDesktop(menuContainer) {
   menuContainer.innerHTML = `
-        <nav>
-            <ul id="menu" >
-              <li><a href="index.html">Home</a></li>
-              <li><a href="contato.html">Contato</a></li>
-            </ul>
-          </nav>
-    `;
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  `;
 }
