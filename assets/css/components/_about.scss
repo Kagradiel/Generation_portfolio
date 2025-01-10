@@ -14,3 +14,17 @@
   width: 20dvh;
   height: auto;
 }
+
+@media screen and (max-width: 768px) and (orientation: portrait){ 
+
+  #about {
+    width: 90%;
+  }
+
+  #conteudo {
+    flex-direction: column;
+    margin: auto auto;
+  }
+
+
+}
